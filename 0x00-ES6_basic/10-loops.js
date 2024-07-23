@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-/* eslint-disable */
+/* eslint no-param-reassign: "error" */
 
 export default function appendToEachArrayValue(array, appendString) {
-  for (let [index, element] of array.entries()) {
+  for (const [index, element] of array.entries()) {
     array[index] = appendString + element;
   }
 
