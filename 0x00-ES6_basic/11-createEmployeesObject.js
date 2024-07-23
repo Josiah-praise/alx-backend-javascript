@@ -2,7 +2,7 @@
 /* eslint-disable */
 
 
-export default function createEmployeesObject(departmentName, employees) {
+module.exports = function createEmployeesObject(departmentName, employees) {
     return {
         [departmentName]: employees,
     };
