@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-export default function hasValuesFromArray(arr, values) {
-  if (!Array.isArray(arr) || !Array.isArray(values)) return false;
-  return values.every((val) => arr.includes(val));
+export default function hasValuesFromArray(set, values) {
+  if (!(set instanceof Set) || !Array.isArray(values)) return false;
+  return values.every((val) => set.includes(val));
 }
