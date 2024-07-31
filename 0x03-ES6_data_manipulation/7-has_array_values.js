@@ -2,5 +2,5 @@
 
 export default function hasValuesFromArray(set, values) {
   if (!(set instanceof Set) || !Array.isArray(values)) return false;
-  return values.every((val) => set.includes(val));
+  return values.every((val) => set.has(val));
 }
