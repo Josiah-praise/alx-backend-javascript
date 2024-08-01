@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 export default function createInt8TypedArray(length, position, value) {
-  if (!(position instanceof Number) || !(length instanceof Number) || !(value instanceof Number)) {
+  if (typeof position !== 'number' || typeof length !== 'number' || typeof value !== 'number') {
     return new DataView(new ArrayBuffer());
   }
 
