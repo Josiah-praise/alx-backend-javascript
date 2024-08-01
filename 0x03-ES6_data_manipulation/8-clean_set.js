@@ -6,8 +6,10 @@ export default function cleanSet(set, startString) {
   const remainder = [];
 
   for (const i of set) {
-    if (i.startsWith(startString)) {
-      remainder.push(i.slice(startString.length));
+    if (typeof i === 'string') {
+      if (i.startsWith(startString)) {
+        remainder.push(i.slice(startString.length));
+      }
     }
   }
 
