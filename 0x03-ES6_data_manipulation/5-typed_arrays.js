@@ -9,7 +9,7 @@ export default function createInt8TypedArray(length, position, value) {
   if (value > 255 || value < 0) throw new Error('Position outside range');
 
   const arrayBuffer = new ArrayBuffer(length);
-  const dataView = new DatatView(arrayBuffer);
-  dataView[position] = value;
+  const dataView = new DataView(arrayBuffer);
+  dataView.setInt8(position, value);
   return dataView;
 }
